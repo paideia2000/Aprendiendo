@@ -41,7 +41,7 @@ class Personaje:
     
     #metodo (getter) que devuelve el valor del atributo encapsulado
     def get__inteligencia(self):
-        return self._inteligencia
+        return self.__inteligencia
     #metodo (setter) que modifica el valor del atributo encapsulado
     def set__fuerza(self, fuerza):
         if fuerza < 0:
@@ -55,4 +55,6 @@ mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)
 
 
 #Aunque los metodos y atributos esten encapsulados, se pueden acceder a ellos como se muestra a continuacion (no es recomendable)
-print(mi_personaje._Personaje__vivo_muerto())
+#print(mi_personaje._Personaje__vivo_muerto())
+
+print(mi_personaje.get__inteligencia())
