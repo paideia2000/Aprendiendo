@@ -8,7 +8,6 @@ class Personaje:
         self.inteligencia = inteligencia
         self.defensa = defensa
         self.fuerza = fuerza
-        self.aguante = fuerza + defensa
 #Mostrar los atributos de la clase        
     def atributos(self):
         print("Nombre: ", self.nombre, sep="")
@@ -42,12 +41,26 @@ class Personaje:
 
 
 #Objetos de la clase Personaje
-mi_personaje = Personaje("Renesongo", 100, 50, 30, 20)
-mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)  
+#mi_personaje = Personaje("Renesongo", 100, 50, 30, 20)
+#mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)  
 
 
-zczczcx
+class guerrero(Personaje):
+    
+    def __init__(self, nombre, vida, inteligencia, defensa, fuerza, espada):
+        super().__init__(nombre, vida, inteligencia, defensa, fuerza)
+        self.espada = espada
+        
+    def cambiar_arma(self):
+        elejir_arma = int(input("Presiona (1) para espada de fuergo y (2) para espada de hielo: "))
+        if elejir_arma == 1:
+            self.espada = 8
+        elif elejir_arma == 2:
+            self.espada = 10
+        else:
+            print("Error:¡Arma no disponible!")
+        
 
+supreme = guerrero("Supreme", 100, 30, 45, 20, 5)
 
-
-
+print(supreme.cambiar_arma())
