@@ -3,15 +3,13 @@ class Robot():
         self.nombre = nombre
         self.posicion = (0, 0)
 
+
     
     def obtener_movimiento(self):    
         while True:
-                obtener_mov = input("Ingresa (A) para ir hacia adelante; (R) para Retroceder; (I) Izquierda; (D) Derecha: ").lower().strip()
-                if obtener_mov in ["a", "r", "i" ,"d"]:
+                obtener_mov = input("Ingresa (A) para ir hacia adelante; (R) para Retroceder; (I) Izquierda; (D) Derecha o (FIN) para salir del programa: ").lower().strip()
+                if obtener_mov in ["a", "r", "i" ,"d", "fin"]:
                     return obtener_mov
-                elif obtener_mov == "fin":
-                    print("Hasta luego")
-                    break
                 else:
                     print("Error: Tiene que ingresar algun valor que se le indica en la pregunta anterior. GRACIAS")
 
@@ -26,8 +24,14 @@ class Robot():
             print(f"{self.nombre} se ha movido hacia la izquierda, la posisicon es: {self.posicion[1] - 1, self.posicion[1]}")
 
     def ejecutar(self):
-        mov_obtenido = self.obtener_movimiento()
-        mi_robot.posicion_tablero(mov_obtenido)
+        while True:
+            mov_obtenido = self.obtener_movimiento()
+            if mov_obtenido == "fin":
+                print("Hasta luego gracias")
+                break
+            else:
+                self.posicion_tablero(mov_obtenido)
+
 
 
     
