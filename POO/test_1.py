@@ -52,15 +52,26 @@ class guerrero(Personaje):
         self.espada = espada
         
     def cambiar_arma(self):
-        elejir_arma = int(input("Presiona (1) para espada de fuergo y (2) para espada de hielo: "))
-        if elejir_arma == 1:
-            self.espada = 8
-        elif elejir_arma == 2:
-            self.espada = 10
-        else:
-            print("Error:¡Arma no disponible!")
-        
 
-supreme = guerrero("Supreme", 100, 30, 45, 20, 5)
 
-print(supreme.cambiar_arma())
+
+        while True:    
+            try:    
+                elejir_arma = int(input("Presiona (1) para espada de fuergo y (2) para espada de hielo: "))
+                if elejir_arma == 1:
+                    self.espada = 8
+                    print(f"Has cambiado a ¡Espada de fuego!, el daño es igual a {self.espada}")
+                    break
+                elif elejir_arma == 2:
+                    self.espada = 10
+                    print(f"Has cambiado a ¡Espada de hielo!, el daño es igual a {self.espada}")
+                    break
+                else:
+                    print("Error:¡Arma no disponible!")
+            except ValueError:
+                print("Error: Debes elejir las armas por su valor en el inventario") 
+supreme = Personaje("Supreme", 150, 50, 65, 40,)
+horco = guerrero("Enemigo", 100, 30, 45, 20, 5)
+
+
+

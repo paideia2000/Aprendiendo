@@ -44,11 +44,13 @@ class Personaje:
         return self.__inteligencia
     #metodo (setter) que modifica el valor del atributo encapsulado
     def set__fuerza(self, fuerza):
-        if fuerza < 0:
-            print("Error: No se puede tener una fuerza negativa")
-        else:
-            self.__fuerza = fuerza
-
+            if fuerza < 0:
+                return  "Error: No se puede tener una fuerza negativa"
+            elif fuerza >= 0:
+                self.__fuerza = fuerza
+                return fuerza
+            else: 
+                return "Error: Introdusca un numero positivo"
 #Objetos de la clase Personaje
 mi_personaje = Personaje("Renesongo", 100, 50, 30, 20)
 mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)  
@@ -57,4 +59,4 @@ mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)
 #Aunque los metodos y atributos esten encapsulados, se pueden acceder a ellos como se muestra a continuacion (no es recomendable)
 #print(mi_personaje._Personaje__vivo_muerto())
 
-print(mi_personaje.get__inteligencia())
+print(mi_personaje.set__fuerza())
