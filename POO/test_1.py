@@ -20,6 +20,7 @@ class Personaje:
         self.fuerza += fuerza
         self.inteligencia += inteligencia
         self.defensa += defensa
+        return f"Ahora tu fuerza es: {self.fuerza}, tu inteligencia es: {self.inteligencia}, y tu defensa e: {self.defensa}"
 #Metodo que indica si el personaje esta vivo o mmuerto
     def vivo_muerto(self):
         if self.vida > 0:
@@ -37,24 +38,13 @@ class Personaje:
         print(self.nombre, "ha atacado a", enemigo.nombre)
         print("El enemigo ha recicbido", daño, "de daño")
         print(enemigo.vivo_muerto())
-    
-
-
-#Objetos de la clase Personaje
-#mi_personaje = Personaje("Renesongo", 100, 50, 30, 20)
-#mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)  
-
 
 class guerrero(Personaje):
-    
+        
     def __init__(self, nombre, vida, inteligencia, defensa, fuerza, espada):
         super().__init__(nombre, vida, inteligencia, defensa, fuerza)
         self.espada = espada
-        
     def cambiar_arma(self):
-
-
-
         while True:    
             try:    
                 elejir_arma = int(input("Presiona (1) para espada de fuergo y (2) para espada de hielo: "))
@@ -70,8 +60,11 @@ class guerrero(Personaje):
                     print("Error:¡Arma no disponible!")
             except ValueError:
                 print("Error: Debes elejir las armas por su valor en el inventario") 
+
 supreme = Personaje("Supreme", 150, 50, 65, 40,)
 horco = guerrero("Enemigo", 100, 30, 45, 20, 5)
+
+horco.cambiar_arma()
 
 
 
