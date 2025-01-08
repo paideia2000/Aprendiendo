@@ -59,4 +59,4 @@ mi_enemigo = Personaje("Enemigo", 100, 40, 15, 10)
 #Aunque los metodos y atributos esten encapsulados, se pueden acceder a ellos como se muestra a continuacion (no es recomendable)
 #print(mi_personaje._Personaje__vivo_muerto())
 
-print(mi_personaje.set__fuerza())
+print(mi_personaje.set__fuerza(10))
