@@ -1,3 +1,4 @@
+#Ejercicios extraidos de: (https://plataforma.josedomingo.org/pledin/cursos/programacion_python3/curso/u42/)
 class Persona():
     def __init__(self, nombre, edad, dni):
         self.__nombre = nombre
