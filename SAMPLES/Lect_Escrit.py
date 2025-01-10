@@ -2,8 +2,8 @@ print("LECTURA Y ESCRITURA DE ARCHIVOS")
 
 #Muestra por consola lo que contiene un archivo.
 
-archivo = open("ejercicio_1.py", "r")
-contenido_del_archivo = archivo.read()
+archivo = open("ejercicio_1.py", "r")# la "R" indica que abriremos el archivo si existe en modo escritura 
+contenido_del_archivo = archivo.read()# utilizamos el metodo read para mostrar el contenido del archivo por consola
 print(contenido_del_archivo)
 archivo.close()
 
