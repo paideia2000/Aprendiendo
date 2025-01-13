@@ -5,19 +5,20 @@ class Persona():
         self.__edad = edad
         self.__dni = dni
     
-    def get__nombre(self):
-        return self.__nombre
+    @property#decorador, para conseguir nombre
+    def nombre(self):
+        print(self.__nombre)
     
     def get__edad(self):
         print(self.__edad)
     
     def get__dni(self):
         print(self.__dni)
-        
-    def mostrar(self):
-        print("Su nombre es: {}".format(self.__nombre))
-        print("Su edad es: {}".format(self.__edad)) 
-        print("Su dni es: {}".format(self.__dni))
+    #se usa la funsion magica __str__ para un metodo que realice una impresion por pantalla    
+    def __str__(self):
+        print("Su nombre es: {}".format(str(self.__nombre)))
+        print("Su edad es: {}".format(str(self.__edad))) 
+        print("Su dni es: {}".format(str(self.__dni)))
         
     def mayor_o_menor(self):
         if self.__edad < 18:
@@ -25,10 +26,12 @@ class Persona():
         else:
             print(f"{self.__nombre} tiene {self.__edad} años, por lo tanto es mayor de edad")
             
-    def set__nombre(self, otro_nombre):
-        self.__nombre = otro_nombre
-        return self.__nombre
-        
+    
+    @nombre.setter
+    def nombre(self, nombre):
+        self.__nombre = nombre
+        print(self.__nombre)
+    
     def set__edad(self, otra_edad):
         self.__edad = otra_edad
         return self.__edad
@@ -38,8 +41,12 @@ class Persona():
         return self.__dni
         
 persoan1 = Persona("Rene", 24, "07294960G")
-persoan1.mostrar()
+persoan1.nombre = "Rubeque"
 
-print("\nSe ha modificado el nombre a: {}".format(persoan1.set__nombre("Ruben")))
-print("Se ha modificado la edad a: {}".format(persoan1.set__edad(24)))
-print("Se ha modificado el dni a: {}".format(persoan1.set__dni("07295960G")))
+
+
+
+
+#print("\nSe ha modificado el nombre a: {}".format(persoan1.set__nombre("Ruben")))
+#print("Se ha modificado la edad a: {}".format(persoan1.set__edad(24)))
+#print("Se ha modificado el dni a: {}".format(persoan1.set__dni("07295960G")))
