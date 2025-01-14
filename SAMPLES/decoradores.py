@@ -5,7 +5,7 @@ class Persona():
         self.__edad = edad
         self.__dni = dni
     
-    @property#decorador, para conseguir nombre
+    @property#decorador, para conseguir nombre, cobvierte la funsion en un atributo
     def nombre(self):
         print(self.__nombre)
     
@@ -27,7 +27,7 @@ class Persona():
             print(f"{self.__nombre} tiene {self.__edad} años, por lo tanto es mayor de edad")
             
     
-    @nombre.setter
+    @nombre.setter#decorador, para editar nombre, cobvierte la funsion en un atributo
     def nombre(self, nombre):
         self.__nombre = nombre
         print(self.__nombre)
@@ -41,7 +41,7 @@ class Persona():
         return self.__dni
         
 persoan1 = Persona("Rene", 24, "07294960G")
-persoan1.nombre = "Rubeque"
+persoan1.nombre = "Rubeque"#utilizando el decorador setter
 
 
 

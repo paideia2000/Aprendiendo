@@ -1,4 +1,4 @@
-#sistema bancario siemplre
+#sistema bancario simple
 
 def consultar_saldo(saldo):
     print(f"Su saldo actual es de {round(saldo, 2)} euros")
