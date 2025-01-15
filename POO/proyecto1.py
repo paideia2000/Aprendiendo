@@ -1,7 +1,6 @@
 #sistema bancario simple
-
 def consultar_saldo(saldo):
-    print(f"Su saldo actual es de {round(saldo, 2)} euros")
+    print(f"Su saldo actual es de {saldo} euros")
     
 def ingresar_dinero():
     añadir_dinero = float(input("Indicanos la cantidad que desea ingresar.: "))
@@ -27,9 +26,9 @@ def retirar_dinero(saldo):
 def menu_principa():
     saldo = 0
     #creando interfaz
-    print("\n--- Bienvenido a '4R' Bank " + " Su banco de confianza. ---")
-    print("\nA continuacion accion le apareceran 4 acciones, cual desea realizar?.")
+    print("\n--- Bienvenido a '4R' Bank, su banco de confianza. ---")
     print("-" * 50)
+    print("\nA continuacion accion le apareceran 4 opciones, cual desea realizar?.")
     print("-> Ingrese el digito (1) para consultar su saldo.")
     print("-> Ingrese el digito (2) para ingresar dinero.")
     print("-> Ingrese el digito (3) para extraer dinero.")

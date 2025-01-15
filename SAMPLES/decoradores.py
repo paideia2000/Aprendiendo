@@ -5,7 +5,7 @@ class Persona():
         self.__edad = edad
         self.__dni = dni
     
-    @property#decorador, para conseguir nombre, cobvierte la funsion en un atributo
+    @property#decorador para conseguir nombre, convierte la funsion en un atributo
     def nombre(self):
         print(self.__nombre)
     
