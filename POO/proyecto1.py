@@ -35,9 +35,7 @@ def menu_principa():
     print("-> Ingrese el digito (3) para extraer dinero.")
     print("-> Ingrese el digito (4) para salir del programa.\n")
     
-    
-    #entrada de datos por parte del cliente
-    while True:
+    while True:#entrada de datos por parte del cliente
         try:    
             opcion = int(input("Cual opcion desea realizar?.:"))
             if opcion == 1:
@@ -53,10 +51,7 @@ def menu_principa():
                 print("Por favor ingrese un valor de los que se le indica anteriormente, ¡Gracias!.")
         except ValueError as v:
             print(v)
-                
-                
-                
-
+    
 if __name__ == '__main__':
     menu_principa()
 
