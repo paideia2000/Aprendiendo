@@ -53,5 +53,3 @@ def menu_principa():
     
 if __name__ == '__main__':
     menu_principa()
-
-#probando pull
