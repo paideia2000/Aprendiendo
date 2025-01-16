@@ -52,5 +52,5 @@ def menu_principa():
             print(v)
     
 if __name__ == '__main__':
-    menu_principa()
+    menu_principa()#ejecutar esta funsion
 
