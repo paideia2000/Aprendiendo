@@ -20,8 +20,8 @@ def buscar_contacto(nombre_contacto):
     else:
         print(f"El numero del contacto '{nombre_contacto}' es: {agenda[nombre_contacto]}")
         
-def ejecutar():
-    #interfaz que se le muestra al usuario
+def ejecutar():#interfaz que se le muestra al usuario
+    
     print("\n--- Bienvenido a la Agenda ---")
     print("-> Ingrese el digito (1) para ver sus contactos.")
     print("-> Ingrese el digito (2) para insertar un nuevo contacto.")
@@ -29,13 +29,13 @@ def ejecutar():
     print("-> Ingrese el digito (4) para buscar un contacto.")
     print("-> Ingrese el digito (5) para salir del programa.")
     
-    #Ejecucion del programa
-    while True:
+    while True:#Ejecucion del programa
         try:            
             accion_usuario = int(input("\nCual de las anteriores acciònes desea realizar?. "))
             if accion_usuario == 5:
                 print("Nos volveremos a ver, Hasta la proxima.")
                 break
+            
             elif accion_usuario == 4:
                 buscar_nombre = input("Ingrese el nombre del usuario que desea encontrar.: ")
                 buscar_contacto(buscar_nombre)
@@ -65,10 +65,12 @@ def ejecutar():
                     print("La agenda esta vacia")
                 else:
                     consultar_agenda()
+            
             else:
                 print("¡Error!, elija unas de las opciones definidas anteriormente")
         except ValueError:
             print("¡Error!: Ingrese un valor numerico.")
+    
 
 if __name__ == "__main__":
     ejecutar()
