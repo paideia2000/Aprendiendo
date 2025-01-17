@@ -37,17 +37,5 @@ def ejecutar():
             print("\n" + "¡Operador invàlido!, indique alguno de los cuales se les muestra")
 
         
-            
-        
-        
-
-
 ejecutar()
 
-
-
-#if operador == "%":
-#   if int(number_1) % 2 == 0:
-#      print(f"'{number_1}' es un numero par.")
-# else:
-#     print(f"'{number_1}' es un numero impar.")
