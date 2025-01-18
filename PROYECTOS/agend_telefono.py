@@ -1,5 +1,5 @@
 #agenda telefonica
-agenda = {}#"Rene": 613121861, "Ruben": "613126861"
+agenda = {}
 
 def consultar_agenda():
     print("Nombre".ljust(20) + "N-Contacto")#espaciando 20 casillas en el str(nombre) y el str(N-Contacto) con .ljust(20)
@@ -71,7 +71,6 @@ def ejecutar():#interfaz que se le muestra al usuario
         except ValueError:
             print("¡Error!: Ingrese un valor numerico.")
     
-
 if __name__ == "__main__":
     ejecutar()
     
