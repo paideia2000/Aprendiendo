@@ -21,30 +21,25 @@ def buscar_contacto(nombre_contacto):
         print(f"El numero del contacto '{nombre_contacto}' es: {agenda[nombre_contacto]}")
         
 def ejecutar():#interfaz que se le muestra al usuario
-    
     print("\n--- Bienvenido a la Agenda ---")
     print("-> Ingrese el digito (1) para ver sus contactos.")
     print("-> Ingrese el digito (2) para insertar un nuevo contacto.")
     print("-> Ingrese el digito (3) para eliminar un contacto.")
     print("-> Ingrese el digito (4) para buscar un contacto.")
     print("-> Ingrese el digito (5) para salir del programa.")
-    
     while True:#Ejecucion del programa
         try:            
             accion_usuario = int(input("\nCual de las anteriores acciònes desea realizar?. "))
             if accion_usuario == 5:
                 print("Nos volveremos a ver, Hasta la proxima.")
                 break
-            
             elif accion_usuario == 4:
                 buscar_nombre = input("Ingrese el nombre del usuario que desea encontrar.: ")
                 buscar_contacto(buscar_nombre)
-            
             elif accion_usuario == 3:
                 contacto = input("\nIndiquenos el Nombre del contacto que desea eliminar.: ").strip()
                 elminar_contacto(contacto)
                 continue
-            
             elif accion_usuario == 2:
                 nombre = input("\nIngrese el nombre del contacto que desea agregar.: ")# obtener el nombre del contacto que quiere agregar
                 while True:
@@ -59,20 +54,15 @@ def ejecutar():#interfaz que se le muestra al usuario
                             break
                     except ValueError:
                         print("¡Valor invàlido!. Debe insertar un numero entero de (7) cifras.")
-            
             elif accion_usuario == 1:
                 if not agenda:
                     print("La agenda esta vacia")
                 else:
                     consultar_agenda()
-            
             else:
                 print("¡Error!, elija unas de las opciones definidas anteriormente")
         except ValueError:
             print("¡Error!: Ingrese un valor numerico.")
-    
 
 if __name__ == "__main__":
     ejecutar()
-    
-
