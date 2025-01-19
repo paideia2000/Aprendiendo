@@ -1,5 +1,5 @@
 #agenda telefonica
-
+agenda = {}
 def consultar_agenda():
     print("Nombre".ljust(20) + "N-Contacto")#espaciando 20 casillas en el str(nombre) y el str(N-Contacto) con .ljust(20)
     print("-" * 30)
@@ -35,7 +35,6 @@ def buscar_contacto(nombre_contacto):
         print(f"El numero del contacto '{nombre_contacto}' es: {agenda[nombre_contacto]}")
         
 def ejecutar():#interfaz que se le muestra al usuario
-    agenda = {}
     print("\n--- Bienvenido a la Agenda ---")
     print("-> Ingrese el digito (1) para ver sus contactos.")
     print("-> Ingrese el digito (2) para insertar un nuevo contacto.")
@@ -71,9 +70,4 @@ def ejecutar():#interfaz que se le muestra al usuario
 if __name__ == "__main__":
         
     ejecutar()
-            
-            
-            
-            
-            
-    
+
