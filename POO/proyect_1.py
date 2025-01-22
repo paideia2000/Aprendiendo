@@ -54,6 +54,10 @@ liga = Liga(equipos)
 liga.enfrentamiento()
 liga.tabla_posiciones()
 
+if __name__ == "__main__":
+    Equipo()
+
+
 
 
 
