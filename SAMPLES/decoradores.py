@@ -16,9 +16,7 @@ class Persona():
         print(self.__dni)
     #se usa la funsion magica __str__ para un metodo que realice una impresion por pantalla    
     def __str__(self):
-        print("Su nombre es: {}".format(str(self.__nombre)))
-        print("Su edad es: {}".format(str(self.__edad))) 
-        print("Su dni es: {}".format(str(self.__dni)))
+        return f"Su nombre es: {self.__nombre}\nSu edad es: {self.__edad}\nSu dni es: {self.__dni}"
         
     def mayor_o_menor(self):
         if self.__edad < 18:
@@ -41,8 +39,7 @@ class Persona():
         return self.__dni
         
 persoan1 = Persona("Rene", 24, "07294960G")
-persoan1.nombre = "Rubeque"#utilizando el decorador setter
-
+print(str(persoan1))
 
 
 
