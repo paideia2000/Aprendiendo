@@ -1,4 +1,5 @@
 #liga de futboll con programas: clases(Equipos,Partidos,Liga)
+
 import random
 class Equipo:
     def __init__(self, nombre):
@@ -55,8 +56,7 @@ liga.enfrentamiento()
 liga.tabla_posiciones()
 
 if __name__ == "__main__":
-    Equipo()
-
+    pass 
 
 
 
